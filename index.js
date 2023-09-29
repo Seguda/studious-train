@@ -191,3 +191,97 @@ console.log("The circumference is:", circumference); */
 //     console.log("You failed");
 //     break;
 // }
+
+// let temp = 24;
+// if (temp > 0 && temp < 30) {
+//   console.log("The weather is great!");
+// } else {
+//   console.log("The weather is bad!");
+// }
+
+// let temp = 50;
+// if (temp > 0 || temp >= 30) {
+//   console.log("The weather is great!");
+// } else {
+//   console.log("The weather is bad!");
+// }
+
+// let temp = 15;
+// let sunny = true;
+// if (!(temp > 0)) {
+//   console.log("it's cold outside");
+// } else {
+//   console.log("it's warm outside");
+// }
+// if (!sunny) {
+//   console.log("it's cloudy outside");
+// } else {
+//   console.log("it's sunny outside");
+// }
+
+// let userName = "";
+// while (userName == "" || userName == null) {
+//   userName = window.prompt("Enter your name!");
+// }
+// console.log("Hello", userName);
+
+// ------------>> do while loop do something first then check
+// the condition. then do something if the condition is true!
+
+// let userName = "";
+// do {
+//   userName = window.prompt("Enter your name!");
+// } while (userName == "");
+
+// console.log("Hello", userName);
+
+// ---------------->>> For lopp  repeats some code for a certain
+// amount of Times.
+
+// for (let i = 10; i > 0; i -= 2) {
+//   console.log(i);
+// }
+// console.log("God bless you!");
+
+// for (let i = 1; i <= 20; i += 1) {
+//   if (i == 13) {
+//     break;
+//   }
+//   console.log(i);
+// }
+// for (let i = 1; i <= 20; i += 1) {
+//   if (i == 13) {
+//     continue;
+//   }
+//   console.log(i);
+// }
+
+//----------> nested loop is a loop is inside of another loop
+// let symbol = window.prompt("enter a symnol to use");
+// let rows = window.prompt("enter # of rows");
+// let columns = window.prompt("enter # of columns");
+
+// for (let i = 1; i <= rows; i++) {
+//   for (let j = 1; j <= columns; j++) {
+//     document.getElementById("myRectangle").innerHTML += symbol;
+//   }
+//   document.getElementById("myRectangle").innerHTML += "<br>";
+// }
+
+//----------->function is defining a code once and use it many times.
+//to perform some code, call the function name!
+
+startParty();
+
+function startParty() {
+  let userName = "Seha";
+  let age = "28";
+  happyBirthday(userName, age);
+}
+function happyBirthday(userName, age) {
+  console.log("Happy birthday to you!");
+  console.log("Happy birthday to you!");
+  console.log("Happy birthday dear!", userName);
+  console.log("Happy birthday to you!");
+  console.log("You are", age, "years old!");
+}
