@@ -271,17 +271,63 @@ console.log("The circumference is:", circumference); */
 //----------->function is defining a code once and use it many times.
 //to perform some code, call the function name!
 
-startParty();
+// startParty();
 
-function startParty() {
-  let userName = "Seha";
-  let age = "28";
-  happyBirthday(userName, age);
-}
-function happyBirthday(userName, age) {
-  console.log("Happy birthday to you!");
-  console.log("Happy birthday to you!");
-  console.log("Happy birthday dear!", userName);
-  console.log("Happy birthday to you!");
-  console.log("You are", age, "years old!");
-}
+// function startParty() {
+//   let userName = "Seha";
+//   let age = "28";
+//   happyBirthday(userName, age);
+// }
+// function happyBirthday(userName, age) {
+//   console.log("Happy birthday to you!");
+//   console.log("Happy birthday to you!");
+//   console.log("Happy birthday dear!", userName);
+//   console.log("Happy birthday to you!");
+//   console.log("You are", age, "years old!");
+// }
+
+//--------> return: returns a value back to the place where you
+//invoked a function
+
+// let area;
+// let width;
+// let height;
+
+// width = window.prompt("Enter width");
+// height = window.prompt("Enter height");
+
+// area = getArea(width, height);
+
+// console.log("The area is:", area);
+
+// function getArea(width, height) {
+//   return area;
+// }
+
+//-------->ternary operator: is a short cut of if/else statement
+//takes 3 operands: - a condition with?
+//                  - expression if true :
+//                  - expression if false
+// condition ? expIfTrue : expIfFalse
+
+//--regular function---
+
+// function checkAge(age) {
+//   if (age >= 18) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// let adult = checkAge(34);
+// console.log(adult);
+
+//---ternary operator---
+
+// function checkAge(age) {
+//   return age >= 18 ? true : false;
+// }
+
+// let adult = checkAge(28);
+// console.log(adult);
