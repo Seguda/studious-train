@@ -331,3 +331,8 @@ console.log("The circumference is:", circumference); */
 
 // let adult = checkAge(28);
 // console.log(adult);
+
+function checkWinner(win) {
+  win ? console.log("You win!") : console.log("You lose!");
+}
+checkWinner(true);
