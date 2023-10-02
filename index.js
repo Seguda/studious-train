@@ -365,3 +365,25 @@ console.log("The circumference is:", circumference); */
 // }
 // doSth();
 // console.log(i);
+
+//Template literals = delimited with (`)
+//                   instead of double of single quotes
+//                    allows embeded variables and expressions
+
+let userName = "seha";
+let items = 3;
+let total = 75;
+
+// console.log("Hello", userName);
+// console.log("you have", items, "items in your cart");
+// console.log("Your total is $", total);
+
+// console.log(`Hello ${userName}`);
+// console.log(`you have ${items} items in your cart`);
+// console.log(`Your total is $ ${total}`);
+
+let text = `Hello ${userName}<br>
+  You have ${items} items in your cart<br>
+  Your total is $ ${total}`;
+//console.log(text);
+document.getElementById("myText").innerHTML = text;
