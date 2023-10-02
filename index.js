@@ -332,7 +332,36 @@ console.log("The circumference is:", circumference); */
 // let adult = checkAge(28);
 // console.log(adult);
 
-function checkWinner(win) {
-  win ? console.log("You win!") : console.log("You lose!");
-}
-checkWinner(true);
+// function checkWinner(win) {
+//   win ? console.log("You win!") : console.log("You lose!");
+// }
+// checkWinner(true);
+
+//variable scope = where a variable is accesible
+// let variables are limited to block scope {} doesnt exist outside of {}
+// var variables are limited to a function {}
+
+// -----let variable ----
+// for (let i = 1; i <= 3; i += 1) {
+//   //console.log(i); //prints 1,2,3
+// }
+// console.log(i); // prints i is undefined since let variaable doesnt exist outside of {}
+
+// ------ var variable -----
+//if you declare global variable with var keyword which is declared outside any function
+//if you declare your global variable with var keyword, var will change browser's window properties
+//it means this can potentially mess with your browser's  window propertiees.
+
+//let name = "seha"; // since this varibale outside of any functions it is considered as a global variable
+//my entire program has access to it and recognizes what it is
+//var name = "seha" // if var keyword is used when declaring a global variable that can be problematic because
+//it can///will change browser's window properties. So to avoid this problem
+//it's considered good practice to use let over var keyword!
+
+// function doSth(params) {
+//   for (var i = 1; i <= 3; i += 1) {
+//     //console.log(i);
+//   }
+// }
+// doSth();
+// console.log(i);
