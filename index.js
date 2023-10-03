@@ -370,9 +370,9 @@ console.log("The circumference is:", circumference); */
 //                   instead of double of single quotes
 //                    allows embeded variables and expressions
 
-let userName = "seha";
-let items = 3;
-let total = 75;
+// let userName = "seha";
+// let items = 3;
+// let total = 75;
 
 // console.log("Hello", userName);
 // console.log("you have", items, "items in your cart");
@@ -382,8 +382,30 @@ let total = 75;
 // console.log(`you have ${items} items in your cart`);
 // console.log(`Your total is $ ${total}`);
 
-let text = `Hello ${userName}<br>
-  You have ${items} items in your cart<br>
-  Your total is $ ${total}`;
-//console.log(text);
-document.getElementById("myText").innerHTML = text;
+// let text = `Hello ${userName}<br>
+//   You have ${items} items in your cart<br>
+//   Your total is $ ${total}`;
+// //console.log(text);
+// document.getElementById("myText").innerHTML = text;
+
+//toLocalString()= returns a string with a language
+//                sensitive representation of this number
+//number.toLocaleString(locals,{options});
+
+//'locale' = specify that language (undefined = default set in browser)
+//'options' = object with formatting options
+
+const answer = Math.floor(Math.random() * 10 + 1);
+let guesses = 0;
+
+document.getElementById("submitButton").onclick = function () {
+  let guess = document.getElementById("guessField").value;
+  guesses += 1;
+  if (guess == answer) {
+    alert(`${answer} is the #. It took you ${guesses} guesses`);
+  } else if (guess < answer) {
+    alert("too small");
+  } else {
+    alert("too large");
+  }
+};
