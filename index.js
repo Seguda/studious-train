@@ -395,17 +395,46 @@ console.log("The circumference is:", circumference); */
 //'locale' = specify that language (undefined = default set in browser)
 //'options' = object with formatting options
 
-const answer = Math.floor(Math.random() * 10 + 1);
-let guesses = 0;
+// let answer = Math.floor(Math.random() * 10 + 1);
+// let guesses = 0;
+
+// document.getElementById("submitButton").onclick = function () {
+//   let guess = document.getElementById("guessBox").value;
+//   guesses += 1;
+
+//   if (guess == answer) {
+//     alert(`Your # is ${answer} and took ${guesses} guesses`);
+//   } else if (guess > answer) {
+//     alert("To large");
+//   } else {
+//     alert("Too small");
+//   }
+// };
+
+//---------------------->Temperature Converting<----------
 
 document.getElementById("submitButton").onclick = function () {
-  let guess = document.getElementById("guessField").value;
-  guesses += 1;
-  if (guess == answer) {
-    alert(`${answer} is the #. It took you ${guesses} guesses`);
-  } else if (guess < answer) {
-    alert("too small");
+  let temp;
+
+  if (document.getElementById("celButton").checked) {
+    temp = document.getElementById("textBox").value;
+    temp = Number(temp);
+    temp = convertToCelcius(temp);
+    document.getElementById("tempLabel").innerHTML = temp + "C";
+  } else if (document.getElementById("fahButton").checked) {
+    temp = document.getElementById("textBox").value;
+    temp = Number(temp);
+    temp = convertToFahrenheit(temp);
+    document.getElementById("tempLabel").innerHTML = temp + "F";
   } else {
-    alert("too large");
+    document.getElementById("tempLabel").innerHTML = "Select a unit";
+  }
+
+  function convertToCelcius(temp) {
+    return (temp * 9) / 5 + 32;
+  }
+
+  function convertToFahrenheit(temp) {
+    return ((temp - 32) * 5) / 9;
   }
 };
