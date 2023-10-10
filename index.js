@@ -413,28 +413,130 @@ console.log("The circumference is:", circumference); */
 
 //---------------------->Temperature Converting<----------
 
-document.getElementById("submitButton").onclick = function () {
-  let temp;
+// document.getElementById("submitButton").onclick = function () {
+//   let temp;
 
-  if (document.getElementById("celButton").checked) {
-    temp = document.getElementById("textBox").value;
-    temp = Number(temp);
-    temp = convertToCelcius(temp);
-    document.getElementById("tempLabel").innerHTML = temp + "C";
-  } else if (document.getElementById("fahButton").checked) {
-    temp = document.getElementById("textBox").value;
-    temp = Number(temp);
-    temp = convertToFahrenheit(temp);
-    document.getElementById("tempLabel").innerHTML = temp + "F";
-  } else {
-    document.getElementById("tempLabel").innerHTML = "Select a unit";
-  }
+//   if (document.getElementById("celButton").checked) {
+//     temp = document.getElementById("textBox").value;
+//     temp = Number(temp);
+//     temp = convertToCelcius(temp);
+//     document.getElementById("tempLabel").innerHTML = temp + "C";
+//   } else if (document.getElementById("fahButton").checked) {
+//     temp = document.getElementById("textBox").value;
+//     temp = Number(temp);
+//     temp = convertToFahrenheit(temp);
+//     document.getElementById("tempLabel").innerHTML = temp + "F";
+//   } else {
+//     document.getElementById("tempLabel").innerHTML = "Select a unit";
+//   }
 
-  function convertToCelcius(temp) {
-    return (temp * 9) / 5 + 32;
-  }
+//   function convertToCelcius(temp) {
+//     return (temp * 9) / 5 + 32;
+//   }
 
-  function convertToFahrenheit(temp) {
-    return ((temp - 32) * 5) / 9;
-  }
-};
+//   function convertToFahrenheit(temp) {
+//     return ((temp - 32) * 5) / 9;
+//   }
+// };
+
+//Array: think of it as variable
+// .     that can store multiple values
+
+// let fruits = ["apple", "orange", "banana"];
+// fruits[2] = "coconut";
+
+// fruits.push("grapes"); //add an element
+// fruits.pop(); //removes last element
+// fruits.unshift("mandarin"); // add aelement to beginning
+// fruits.shift(); //removes element from beginning
+// console.log(fruits);
+
+// let length = fruits.length;
+// let index = fruits.indexOf("orange");
+// console.log(index);
+
+//---->Iterating over the elements of array <-----
+//let prices = [5, 20, 25, 30, 45];
+
+// for (let i = 0; i < prices.length; i += 1) {
+//   console.log(prices[i]);
+// }
+
+// for (let i = prices.length; i >= 0; i -= 1) {
+//   console.log(prices[i]);
+// }
+// for (let price of prices) {
+//   console.log(price);
+// }
+
+// ---->sorting array of string
+
+// let fruits = ["banana", "apple", "mango"];
+
+// //fruits = fruits.sort();
+// fruits = fruits.sort().reverse();
+// for (let fruit of fruits) {
+//   console.log(fruit);
+// }
+
+//------------> Multidimentional array
+
+// let fruits = ["apples", "bananas", "oranges"];
+// let vegetables = ["onions", "gralic", "spinach"];
+// let diary = ["milk", "yogurt", "cheese"];
+
+// let groceryList = [fruits, vegetables, diary];
+
+// groceryList[0][2] = "mangoes";
+// groceryList[2][1] = "goat milk";
+// for (let list of groceryList) {
+//   //console.log(list);
+//   for (let food of list) {
+//     console.log(food);
+//   }
+// }
+
+// ----------> Spread operator
+//spread operator allows an iterable such as an array or string
+//to be expanded in places where zero or more arguments are expected
+//(it's like unpacking the elements from a box)
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(...numbers);
+
+// let maximum = Math.max(...numbers);
+// console.log(maximum);
+
+// let class1 = ["Arda", "Era", "Jack"];
+// let class2 = ["John", "Jeremy", "Phill"];
+
+// class1.push(...class2);
+// console.log(...class1);
+
+// ------------>rest parameters represents an indefinite number
+//of parameters(it's like packing arguments into an array-box)
+
+// let a = 1;
+// let b = 2;
+// let c = 3;
+// let d = 4;
+// let e = 5;
+
+// console.log(sum(a, b, c, d, e));
+
+// function sum(a, b) {
+//   return a + b;
+// }
+// function sum1(a, b, c) {
+//   return a + b + c;
+// }
+// function sum2(a, b, c, d) {
+//   return a + b + c + d;
+// }
+
+// function sum(...numbers) {
+//   let total = 0;
+//   for (let number of numbers) {
+//     total += number;
+//   }
+//   return total;
+// }
