@@ -553,14 +553,28 @@ console.log("The circumference is:", circumference); */
 //   return result;
 // }
 
-sum(2, 3, displayDom);
-function sum(x, y, myFunc) {
-  let result = x + y;
-  myFunc(result);
+// sum(2, 3, displayDom);
+// function sum(x, y, myFunc) {
+//   let result = x + y;
+//   myFunc(result);
+// }
+// function displayConsole(output) {
+//   console.log(output);
+// }
+// function displayDom(output) {
+//   document.getElementById("myLabel").innerHTML = output;
+// }
+
+//------------>array.forEach() method executes a provided callbck function
+//once for each array element
+
+let students = ["arda", "era", "zeynep", "omer"];
+students.forEach(capitalize);
+students.forEach(print);
+function capitalize(element, index, array) {
+  array[index] = element[0].toUpperCase() + element.substring(1);
 }
-function displayConsole(output) {
-  console.log(output);
-}
-function displayDom(output) {
-  document.getElementById("myLabel").innerHTML = output;
+
+function print(element) {
+  console.log(element);
 }
